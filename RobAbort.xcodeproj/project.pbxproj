@@ -14,6 +14,8 @@
 		0032ABF922FB509100035322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0032ABF722FB509100035322 /* LaunchScreen.storyboard */; };
 		0032AC0422FB509100035322 /* RobAbortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032AC0322FB509100035322 /* RobAbortTests.swift */; };
 		0032AC0F22FB509100035322 /* RobAbortUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032AC0E22FB509100035322 /* RobAbortUITests.swift */; };
+		0032AC1D22FB530200035322 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032AC1C22FB530200035322 /* Game.swift */; };
+		0097A72F22FB734D00A3E0BB /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0097A72E22FB734D00A3E0BB /* WordList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		0032AC0A22FB509100035322 /* RobAbortUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobAbortUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0032AC0E22FB509100035322 /* RobAbortUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobAbortUITests.swift; sourceTree = "<group>"; };
 		0032AC1022FB509100035322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0032AC1C22FB530200035322 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0097A72E22FB734D00A3E0BB /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		0032ABE222FB509000035322 = {
 			isa = PBXGroup;
 			children = (
+				0097A72E22FB734D00A3E0BB /* WordList.swift */,
 				0032ABED22FB509000035322 /* RobAbort */,
 				0032AC0222FB509100035322 /* RobAbortTests */,
 				0032AC0D22FB509100035322 /* RobAbortUITests */,
@@ -98,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				0032ABEE22FB509000035322 /* AppDelegate.swift */,
+				0032AC1C22FB530200035322 /* Game.swift */,
 				0032ABF022FB509000035322 /* ViewController.swift */,
 				0032ABF222FB509000035322 /* Main.storyboard */,
 				0032ABF522FB509100035322 /* Assets.xcassets */,
@@ -257,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0032ABF122FB509000035322 /* ViewController.swift in Sources */,
+				0097A72F22FB734D00A3E0BB /* WordList.swift in Sources */,
+				0032AC1D22FB530200035322 /* Game.swift in Sources */,
 				0032ABEF22FB509000035322 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
