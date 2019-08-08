@@ -37,7 +37,7 @@ class Staging {
     }
     
     func removeElementFrom(_ index: Int) -> Tile? {
-        guard index < word.count /*, check the boolean as well */ else {
+        guard index < word.count, word[index].active else {
             return nil
         }
         return word.remove(at: index)
@@ -150,10 +150,13 @@ class Game {
             newWord.append(tile.letter)
             return newWord
         })
-        return actualWord == "hi" // instead, check if it's in the giant dictionary
+        guard let dictionary = Game.wordlist else {
+            return false
+        }
+        return dictionary[actualWord] == 1
     }
     
-    func playWord(player: Player, word: [Tile]) -> Bool {
+    func playWord(player: Player) -> Bool {
         guard whoseTurn === player else {
             return false
         }
@@ -163,12 +166,13 @@ class Game {
         let other = player === player1 ? player2 : player1
         player.pointsOnDeck = word.count
         other.pointsOnDeck = 0
-        self.word = word
+        word = stagingWord.getWord()
         for var tile in word {
             tile.active = false
         }
         fillRack(player: player)
         player.justPassed = false
+        whoseTurn = other
         // check if game is over here
         return true
     }
@@ -179,9 +183,11 @@ class Game {
         }
         let other = player === player1 ? player2 : player1
         other.score += other.pointsOnDeck
-        self.word = []
+        word = []
+        stagingWord.wipe()
         
         player.justPassed = true
+        whoseTurn = other
     }
     
     func checkGameOver() -> Bool {
@@ -193,9 +199,14 @@ class Game {
         return false
     }
     
-    func setupGame() {
+    func newGame() {
         // set up tileBag
         tileBag = initializedTileBag
+        
+        // empty racks
+        player1.rack.removeAll()
+        player2.rack.removeAll()
+        
         // fill racks
         fillRack(player: player1)
         fillRack(player: player2)
