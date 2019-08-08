@@ -29,7 +29,7 @@ class Staging {
     private var word = [Tile]()
     
     func wipe() {
-        word = []
+        word.removeAll()
     }
     
     func insertElement(_ element: Tile, at index: Int) {
@@ -54,35 +54,52 @@ class Staging {
 }
 
 class Game {
+    static let wordlist: [String: Int]? = {
+        guard let filepath = Bundle.main.path(forResource: "wordlist", ofType: "txt") else {
+            return nil
+        }
+        do {
+            let contents = try String(contentsOfFile: filepath)
+            var dictionary = [String: Int]()
+            for word in contents.components(separatedBy: "\n") {
+                dictionary[word] = 1
+            }
+            return dictionary
+        } catch {
+            // contents could not be loaded
+            return nil
+        }
+    }()
+    
     private enum Constant {
         static let rackSize = 7
         static let tileDict: [String: Int] = [
-            "A": 13,
-            "B": 3,
-            "C": 3,
-            "D": 6,
-            "E": 18,
-            "F": 3,
-            "G": 4,
-            "H": 3,
-            "I": 12,
-            "J": 2,
-            "K": 2,
-            "L": 5,
-            "M": 3,
-            "N": 8,
-            "O": 11,
-            "P": 3,
-            "Q": 2,
-            "R": 9,
-            "S": 6,
-            "T": 9,
-            "U": 6,
-            "V": 3,
-            "W": 3,
-            "X": 2,
-            "Y": 3,
-            "Z": 2
+            "A": 7,
+            "B": 2,
+            "C": 2,
+            "D": 3,
+            "E": 9,
+            "F": 2,
+            "G": 2,
+            "H": 2,
+            "I": 6,
+            "J": 1,
+            "K": 1,
+            "L": 3,
+            "M": 2,
+            "N": 4,
+            "O": 6,
+            "P": 2,
+            "Q": 1,
+            "R": 5,
+            "S": 3,
+            "T": 5,
+            "U": 3,
+            "V": 2,
+            "W": 2,
+            "X": 1,
+            "Y": 2,
+            "Z": 1
         ]
     }
     
@@ -91,7 +108,7 @@ class Game {
         for (key, value) in Constant.tileDict {
             tileBag.append(contentsOf: repeatElement(Tile(letter: key, active: true), count: value))
         }
-        return tileBag
+        return tileBag.shuffled()
     }
     
     var tileBag = [Tile]()
@@ -178,7 +195,7 @@ class Game {
     
     func setupGame() {
         // set up tileBag
-        tileBag = initializedTileBag.shuffled()
+        tileBag = initializedTileBag
         // fill racks
         fillRack(player: player1)
         fillRack(player: player2)

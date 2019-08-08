@@ -15,6 +15,7 @@
 		0032AC0422FB509100035322 /* RobAbortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032AC0322FB509100035322 /* RobAbortTests.swift */; };
 		0032AC0F22FB509100035322 /* RobAbortUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032AC0E22FB509100035322 /* RobAbortUITests.swift */; };
 		0032AC1D22FB530200035322 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032AC1C22FB530200035322 /* Game.swift */; };
+		0072785822FC675700707929 /* wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0072785722FC675700707929 /* wordlist.txt */; };
 		0097A72F22FB734D00A3E0BB /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0097A72E22FB734D00A3E0BB /* WordList.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		0032AC0E22FB509100035322 /* RobAbortUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobAbortUITests.swift; sourceTree = "<group>"; };
 		0032AC1022FB509100035322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0032AC1C22FB530200035322 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0072785722FC675700707929 /* wordlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wordlist.txt; sourceTree = "<group>"; };
 		0097A72E22FB734D00A3E0BB /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 		0032ABED22FB509000035322 /* RobAbort */ = {
 			isa = PBXGroup;
 			children = (
+				0072785722FC675700707929 /* wordlist.txt */,
 				0032ABEE22FB509000035322 /* AppDelegate.swift */,
 				0032AC1C22FB530200035322 /* Game.swift */,
 				0032ABF022FB509000035322 /* ViewController.swift */,
@@ -237,6 +240,7 @@
 			files = (
 				0032ABF922FB509100035322 /* LaunchScreen.storyboard in Resources */,
 				0032ABF622FB509100035322 /* Assets.xcassets in Resources */,
+				0072785822FC675700707929 /* wordlist.txt in Resources */,
 				0032ABF422FB509000035322 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
