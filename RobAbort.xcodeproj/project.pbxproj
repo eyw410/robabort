@@ -15,6 +15,8 @@
 		0032AC0422FB509100035322 /* RobAbortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032AC0322FB509100035322 /* RobAbortTests.swift */; };
 		0032AC0F22FB509100035322 /* RobAbortUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032AC0E22FB509100035322 /* RobAbortUITests.swift */; };
 		0032AC1D22FB530200035322 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032AC1C22FB530200035322 /* Game.swift */; };
+		0055260222FDEA410051898C /* KDDragAndDropCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055260022FDEA410051898C /* KDDragAndDropCollectionView.swift */; };
+		0055260322FDEA410051898C /* KDDragAndDropManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055260122FDEA410051898C /* KDDragAndDropManager.swift */; };
 		0072785822FC675700707929 /* wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0072785722FC675700707929 /* wordlist.txt */; };
 		007DD28122FC7B6700A5C503 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007DD27F22FC7B6700A5C503 /* TileCollectionViewCell.swift */; };
 		0097A72F22FB734D00A3E0BB /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0097A72E22FB734D00A3E0BB /* WordList.swift */; };
@@ -52,6 +54,8 @@
 		0032AC0E22FB509100035322 /* RobAbortUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobAbortUITests.swift; sourceTree = "<group>"; };
 		0032AC1022FB509100035322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0032AC1C22FB530200035322 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0055260022FDEA410051898C /* KDDragAndDropCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDDragAndDropCollectionView.swift; sourceTree = "<group>"; };
+		0055260122FDEA410051898C /* KDDragAndDropManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDDragAndDropManager.swift; sourceTree = "<group>"; };
 		0072785722FC675700707929 /* wordlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wordlist.txt; sourceTree = "<group>"; };
 		007DD27F22FC7B6700A5C503 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
 		0097A72E22FB734D00A3E0BB /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		0032ABED22FB509000035322 /* RobAbort */ = {
 			isa = PBXGroup;
 			children = (
+				005525FF22FDEA410051898C /* DragAndDrop */,
 				0072785722FC675700707929 /* wordlist.txt */,
 				0032ABEE22FB509000035322 /* AppDelegate.swift */,
 				0032AC1C22FB530200035322 /* Game.swift */,
@@ -135,6 +140,15 @@
 				0032AC1022FB509100035322 /* Info.plist */,
 			);
 			path = RobAbortUITests;
+			sourceTree = "<group>";
+		};
+		005525FF22FDEA410051898C /* DragAndDrop */ = {
+			isa = PBXGroup;
+			children = (
+				0055260022FDEA410051898C /* KDDragAndDropCollectionView.swift */,
+				0055260122FDEA410051898C /* KDDragAndDropManager.swift */,
+			);
+			path = DragAndDrop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +285,10 @@
 			files = (
 				0032ABF122FB509000035322 /* GameViewController.swift in Sources */,
 				007DD28122FC7B6700A5C503 /* TileCollectionViewCell.swift in Sources */,
+				0055260322FDEA410051898C /* KDDragAndDropManager.swift in Sources */,
 				0097A72F22FB734D00A3E0BB /* WordList.swift in Sources */,
 				0032AC1D22FB530200035322 /* Game.swift in Sources */,
+				0055260222FDEA410051898C /* KDDragAndDropCollectionView.swift in Sources */,
 				0032ABEF22FB509000035322 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
